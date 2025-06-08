@@ -1,0 +1,10 @@
+# Checking for missing values
+print(df.isnull().sum())
+
+# Filling missing values
+df['age'].fillna(df['age'].median(), inplace=True)
+df['embarked'].fillna(df['embarked'].mode()[0], inplace=True)
+df['deck'].fillna('Unknown', inplace=True)
+
+# Drop columns with excessive missing data if necessary
+df.drop(columns=['embark_town'], inplace=True)
