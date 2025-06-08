@@ -1,0 +1,5 @@
+# Basic descriptive statistics
+print(df.describe())
+
+# Class distribution
+print("Survival rate:\n", df['survived'].value_counts(normalize=True))
