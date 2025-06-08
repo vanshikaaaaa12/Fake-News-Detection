@@ -2,9 +2,7 @@ Selection of Appropriate Chart Types for Insights
 📝 Description:
 Choosing the right chart type ensures the message is clearly communicated. Bar charts show comparisons, pie charts show proportions, and scatter plots reveal relationships or distributions.
 
-python
-Copy
-Edit
+
 # Bar Chart: Survival by Sex
 sns.barplot(data=df, x='sex_male', y='survived')
 plt.title("Survival Rate by Sex")
