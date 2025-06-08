@@ -1,0 +1,29 @@
+Selection of Appropriate Chart Types for Insights
+📝 Description:
+Choosing the right chart type ensures the message is clearly communicated. Bar charts show comparisons, pie charts show proportions, and scatter plots reveal relationships or distributions.
+
+python
+Copy
+Edit
+# Bar Chart: Survival by Sex
+sns.barplot(data=df, x='sex_male', y='survived')
+plt.title("Survival Rate by Sex")
+plt.xlabel("Sex (0 = Female, 1 = Male)")
+plt.ylabel("Survival Rate")
+plt.show()
+
+# Pie Chart: Overall Survival Distribution
+survivor_counts = df['survived'].value_counts()
+plt.pie(survivor_counts, labels=['Did Not Survive', 'Survived'],
+        autopct='%1.1f%%', colors=['salmon', 'skyblue'])
+plt.title("Survivor Distribution")
+plt.show()
+
+# Scatter Plot: Age vs Fare (Colored by Survival)
+sns.scatterplot(data=df, x='age', y='fare', hue='survived', palette='coolwarm')
+plt.title("Fare vs Age (Survival Highlighted)")
+plt.xlabel("Age")
+plt.ylabel("Fare")
+plt.show()
+✅ Why it's appropriate: These plots help identify survival differences across groups and visualize relationships in continuous features.
+
