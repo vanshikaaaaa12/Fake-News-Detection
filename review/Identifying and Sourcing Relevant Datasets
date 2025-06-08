@@ -1,0 +1,9 @@
+# Import necessary libraries
+import pandas as pd
+import seaborn as sns
+
+# Load Titanic dataset from seaborn
+df = sns.load_dataset('titanic')
+
+# Display the first few rows
+print(df.head())
