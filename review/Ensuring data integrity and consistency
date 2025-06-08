@@ -1,0 +1,9 @@
+# Check data types and unique values for consistency
+print(df.dtypes)
+print(df.nunique())
+
+# Ensure no duplicate records
+df.drop_duplicates(inplace=True)
+
+# Reset index after cleanup
+df.reset_index(drop=True, inplace=True)
