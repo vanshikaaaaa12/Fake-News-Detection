@@ -1,0 +1,10 @@
+# Handling outliers in 'fare'
+import numpy as np
+
+# Log transformation for skewed distribution
+df['fare_log'] = np.log1p(df['fare'])
+
+# Check effect of transformation
+sns.histplot(df['fare_log'], kde=True)
+plt.title("Log-Transformed Fare Distribution")
+plt.show()
