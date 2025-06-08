@@ -1,0 +1,20 @@
+Interpretation and Storytelling with Data 
+📝 Description:
+Data storytelling involves presenting visuals in a sequence or context that explains the why behind the numbers. Annotations and highlights help guide the reader to key insights.
+
+# Bar Plot with annotation for storytelling
+plt.figure(figsize=(8, 5))
+sns.barplot(data=df, x='pclass', y='survived', palette='pastel')
+plt.title("Survival Rate by Passenger Class", fontsize=14)
+plt.xlabel("Passenger Class")
+plt.ylabel("Survival Rate")
+
+# Annotating a key takeaway
+plt.annotate("Higher class = higher survival rate",
+             xy=(0, 0.6), xytext=(0.5, 0.75),
+             arrowprops=dict(facecolor='black', arrowstyle='->'),
+             fontsize=12)
+plt.tight_layout()
+plt.show()
+✅ Why it's meaningful: This adds context and narrative, turning raw data into a message.
+
