@@ -2,9 +2,6 @@
 📝 Description:
 Well-designed visuals improve understanding. This includes using appropriate labels, fonts, colors, legends, and spacing to make charts more readable and engaging.
 
-python
-Copy
-Edit
 # Barplot: Survival by Age Group with clean aesthetics
 plt.figure(figsize=(8, 5))
 sns.barplot(data=df, x='age_group', y='survived', palette='Set2')
