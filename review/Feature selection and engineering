@@ -1,0 +1,8 @@
+# Dropping irrelevant or redundant columns
+df.drop(columns=['who', 'adult_male', 'alive', 'class'], inplace=True)
+
+# Creating a new feature: family_size
+df['family_size'] = df['sibsp'] + df['parch'] + 1
+
+# Encoding categorical variables
+df = pd.get_dummies(df, columns=['sex', 'embarked', 'deck'], drop_first=True)
