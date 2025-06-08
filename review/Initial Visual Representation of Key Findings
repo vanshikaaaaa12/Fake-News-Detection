@@ -1,0 +1,10 @@
+# Survival by age group
+df['age_group'] = pd.cut(df['age'], bins=[0, 12, 20, 40, 60, 80], labels=['Child', 'Teen', 'Adult', 'Mid-Age', 'Senior'])
+sns.barplot(data=df, x='age_group', y='survived')
+plt.title("Survival Rate by Age Group")
+plt.show()
+
+# Family size vs survival
+sns.barplot(data=df, x='family_size', y='survived')
+plt.title("Survival Rate by Family Size")
+plt.show()
