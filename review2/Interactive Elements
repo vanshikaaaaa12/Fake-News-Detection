@@ -1,0 +1,24 @@
+Interactive Elements 
+📝 Description:
+Interactive visuals let users explore data dynamically through zooming, tooltips, and filtering. This enhances usability, especially for presentations or dashboards.
+
+python
+Copy
+Edit
+import plotly.express as px
+
+# Interactive Scatter Plot: Age vs Fare
+fig = px.scatter(df, x='age', y='fare', color='survived',
+                 hover_data=['sex_male', 'pclass', 'family_size'],
+                 title="Interactive: Age vs Fare Colored by Survival")
+fig.update_layout(xaxis_title="Age", yaxis_title="Fare")
+fig.show()
+
+# Interactive Bar Chart: Survival Rate by Class
+fig = px.bar(df.groupby('pclass')['survived'].mean().reset_index(),
+             x='pclass', y='survived', text='survived',
+             title="Interactive: Average Survival by Class")
+fig.update_traces(marker_color='indianred')
+fig.update_layout(xaxis_title="Passenger Class", yaxis_title="Survival Rate")
+fig.show()
+✅ Why it's powerful: Hover info and dynamic charts allow deeper exploration beyond static images.
