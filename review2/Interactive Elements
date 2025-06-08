@@ -2,9 +2,6 @@ Interactive Elements
 📝 Description:
 Interactive visuals let users explore data dynamically through zooming, tooltips, and filtering. This enhances usability, especially for presentations or dashboards.
 
-python
-Copy
-Edit
 import plotly.express as px
 
 # Interactive Scatter Plot: Age vs Fare
